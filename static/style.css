@@ -2,8 +2,8 @@ body,html{
 	height: 100%;
 	margin: 0;
 	background: rgb(44, 47, 59);
-   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
-	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+   background: -webkit-linear-gradient(to right, rgb(49, 63, 89), rgb(23, 37, 61), rgb(32, 32, 43));
+	background: linear-gradient(to right, rgb(46, 67, 83), rgb(53, 67, 97), rgb(31, 31, 105));
 }
 
 .chat{
@@ -113,7 +113,7 @@ border-radius: 0 0 15px 15px !important;
 	position: absolute;
 	height: 15px;
 	width:15px;
-	background-color: #4cd137;
+	background-color: #28a851;
 	border-radius: 50%;
 	bottom: 0.2em;
 	right: 0.4em;
