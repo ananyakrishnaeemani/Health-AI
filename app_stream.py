@@ -69,7 +69,7 @@ rag_chain = create_retrieval_chain(st.session_state["retriever"], question_answe
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to:", ["Chat", "History", "About"])
+page = st.sidebar.radio("Go to:", ["Chat", "About"])
 
 if page == "Chat":
     st.title("🩺 Medical Chatbot")
@@ -108,23 +108,23 @@ if page == "Chat":
         history = pd.concat([history, new_entry], ignore_index=True)
         history.to_csv(HISTORY_FILE, index=False)
 
-elif page == "History":
-    st.title("📜 Chat History")
+# elif page == "History":
+#     st.title("📜 Chat History")
     
-    try:
-        history = pd.read_csv(HISTORY_FILE)
+#     try:
+#         history = pd.read_csv(HISTORY_FILE)
         
-        if history.empty:
-            st.write("No chat history available.")
-        else:
-            # Display each past chat in a chat-style format
-            for index, row in history.iterrows():
-                with st.chat_message("user"):
-                    st.markdown(f"**You:** {row['User Input']}")
-                with st.chat_message("assistant"):
-                    st.markdown(f"**Chatbot:** {row['Chatbot Response']}")
-    except Exception as e:
-        st.write("Error loading history:", e)
+#         if history.empty:
+#             st.write("No chat history available.")
+#         else:
+#             # Display each past chat in a chat-style format
+#             for index, row in history.iterrows():
+#                 with st.chat_message("user"):
+#                     st.markdown(f"**You:** {row['User Input']}")
+#                 with st.chat_message("assistant"):
+#                     st.markdown(f"**Chatbot:** {row['Chatbot Response']}")
+#     except Exception as e:
+#         st.write("Error loading history:", e)
 
 
 elif page == "About":
