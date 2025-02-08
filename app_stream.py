@@ -16,11 +16,14 @@ st.set_page_config(page_title="Medical Chatbot", layout="wide")
 # Load environment variables
 load_dotenv()
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+# os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+# os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+
+PINECONE_API_KEY="pcsk_3P8KL7_TrBnWA3L97ZhYzvRpiUdRizaWraHvXN7mbaVKxnvbgRHE1H2Ufne3ZHyx7NmrLP"
+GROQ_API_KEY = "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"
 
 # ✅ Cache embeddings to prevent reloading on every interaction (silent loading)
 @st.cache_resource
