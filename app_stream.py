@@ -53,10 +53,10 @@ if "initialized" not in st.session_state:
     st.session_state["llm"] = load_llm()
     st.session_state["initialized"] = True
 
-# Ensure history file exists
-HISTORY_FILE = "history.csv"
-if not os.path.exists(HISTORY_FILE):
-    pd.DataFrame(columns=["User Input", "Chatbot Response"]).to_csv(HISTORY_FILE, index=False)
+# # Ensure history file exists
+# HISTORY_FILE = "history.csv"
+# if not os.path.exists(HISTORY_FILE):
+#     pd.DataFrame(columns=["User Input", "Chatbot Response"]).to_csv(HISTORY_FILE, index=False)
 
 # Create RAG chain
 prompt = ChatPromptTemplate.from_messages([
@@ -102,11 +102,11 @@ if page == "Chat":
         with st.chat_message("assistant"):
             st.markdown(bot_response)
 
-        # ✅ Save conversation history
-        history = pd.read_csv(HISTORY_FILE)
-        new_entry = pd.DataFrame([[user_input, bot_response]], columns=["User Input", "Chatbot Response"])
-        history = pd.concat([history, new_entry], ignore_index=True)
-        history.to_csv(HISTORY_FILE, index=False)
+        # # ✅ Save conversation history
+        # history = pd.read_csv(HISTORY_FILE)
+        # new_entry = pd.DataFrame([[user_input, bot_response]], columns=["User Input", "Chatbot Response"])
+        # history = pd.concat([history, new_entry], ignore_index=True)
+        # history.to_csv(HISTORY_FILE, index=False)
 
 # elif page == "History":
 #     st.title("📜 Chat History")
