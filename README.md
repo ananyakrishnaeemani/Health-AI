@@ -1,8 +1,5 @@
-# AI Powered Health Assistant 
+# 🏥 AI Powered Health Assistant 
 **You can try the deployed version of my chatbot here:** [https://ai-healthassistant.streamlit.app/](https://ai-healthassistant.streamlit.app/)
-
-## 🏥 AI-Powered Virtual Health Assistant
-**Health-AI** is an advanced AI-powered virtual health assistant designed to help users manage their healthcare needs efficiently. The platform provides features such as symptom analysis, doctor recommendations, appointment scheduling, and medical record management.
 
 ## Installation and Setup
 
