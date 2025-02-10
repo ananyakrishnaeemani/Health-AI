@@ -4,10 +4,6 @@
 ## 🏥 AI-Powered Virtual Health Assistant
 **Health-AI** is an advanced AI-powered virtual health assistant designed to help users manage their healthcare needs efficiently. The platform provides features such as symptom analysis, doctor recommendations, appointment scheduling, and medical record management.
 
-# Chatbot with RAG and Vector Database
-
-This project is an AI-powered chatbot that provides responses based on Retrieval-Augmented Generation (RAG) using Pinecone for vector storage and Groq API for LLM-based query handling.
-
 ## Installation and Setup
 
 Follow these steps to set up and run the chatbot locally:
