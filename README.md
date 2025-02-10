@@ -27,15 +27,14 @@ Modify the `.env` file with your Pinecone API key and Groq API key. Then, run th
 python store_index.py
 ```
 
-### 5. Run this Flask UI
-```bash
-python app.py
-```
-
-### 6. Run the Streamlit UI
-Launch the chatbot interface using Streamlit:
+### 5. Run this for Streamlit UI
 ```bash
 streamlit run app_stream.py
+```
+
+### 6. Run this Flask UI
+```bash
+python app.py
 ```
 
 ## 🚀 Features
