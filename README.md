@@ -27,8 +27,7 @@ Modify the `.env` file with your Pinecone API key and Groq API key. Then, run th
 python store_index.py
 ```
 
-### 5. Run the Flask Backend
-Start the backend API using Flask:
+### 5. Run this Flask UI
 ```bash
 python app.py
 ```
