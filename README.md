@@ -43,7 +43,6 @@ python app.py
 - **Health Query Resolution** Responds to user queries with AI-generated medical insights.
 - **Symptom-Based Assistance**  Provides preliminary guidance on symptoms and possible
 conditions.
-- **Conversational Memory**  Retains chat history for an improved user experience.
 - **Secure and Scalable Architecture**  Ensures data security and efficient handling of multiple
 queries.
 
