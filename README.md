@@ -32,7 +32,7 @@ python store_index.py
 streamlit run app_stream.py
 ```
 
-### 6. Run this Flask UI
+### 6. Run this for Flask UI
 ```bash
 python app.py
 ```
