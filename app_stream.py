@@ -10,7 +10,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from src.prompt import system_prompt
 
-# ✅ Must be the first command
+
 st.set_page_config(page_title="Medical Chatbot", layout="wide")
 
 # Load environment variables
@@ -25,12 +25,12 @@ load_dotenv()
 PINECONE_API_KEY="pcsk_3P8KL7_TrBnWA3L97ZhYzvRpiUdRizaWraHvXN7mbaVKxnvbgRHE1H2Ufne3ZHyx7NmrLP"
 GROQ_API_KEY = "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"
 
-# ✅ Cache embeddings to prevent reloading on every interaction (silent loading)
+
 @st.cache_resource
 def load_embeddings():
     return download_hugging_face_embeddings()
 
-# ✅ Cache Pinecone retriever (silent loading)
+
 @st.cache_resource
 def load_retriever():
     embeddings = load_embeddings()
@@ -38,7 +38,7 @@ def load_retriever():
     docsearch = PineconeVectorStore.from_existing_index(index_name=index_name, embedding=embeddings)
     return docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
-# ✅ Cache LLM model (silent loading)
+
 @st.cache_resource
 def load_llm():
     return ChatGroq(
@@ -47,7 +47,7 @@ def load_llm():
         model_name="llama-3.3-70b-versatile"
     )
 
-# ✅ Track initialization state
+
 if "initialized" not in st.session_state:
     st.session_state["retriever"] = load_retriever()
     st.session_state["llm"] = load_llm()
@@ -102,7 +102,7 @@ if page == "Chat":
         with st.chat_message("assistant"):
             st.markdown(bot_response)
 
-        # # ✅ Save conversation history
+       
         # history = pd.read_csv(HISTORY_FILE)
         # new_entry = pd.DataFrame([[user_input, bot_response]], columns=["User Input", "Chatbot Response"])
         # history = pd.concat([history, new_entry], ignore_index=True)
